@@ -23,7 +23,7 @@ left: 200px;
 
 Zuerst erstellen wir unsere Animation mit der Regel @keyframes. Diese hat folgende Struktur:
 
-````css
+```css
 @keyframes <animation-name> {
       keyframe selector {
         css styles here ....
