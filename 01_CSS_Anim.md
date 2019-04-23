@@ -107,6 +107,47 @@ Um eine Transition zu erzeugen, müssen zwei Dinge angegeben werden:
   - der CSS Parameter, der verändert werden soll.
   - die Dauer der Transition in sec.
 
+Im obigen Beispiel werden zwei CSS Parameter verändert. Welche? 
+
+<details>
+<summary>Lösung</summary>
+<p>
+
+```css
+background-color: red; /* from green */
+transform: rotate(45deg); /* from 0deg */
+```
+
+</p>
+</details> 
+
+Das Element welches animiert werden soll (in diesem Fall das rote div), erhält folgende Zeile:
+
+```css
+div.red {
+    transition: all 2s;
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+}
+```
+
+und bei mouseover:
+
+```css
+div.red:hover {
+   background: green;
+   transform: rotate(45deg);
+}
+```
+
+Soll verschiedene Parameter mit verschiedenen Zeiten animiert werden, dann muss dies in einer einzigen Zeile geschehen:
+```css
+transition: background 4s, transform 2s;
+```
+
+Die Farbe ändert sich nun über 4sec. wobei die Rotation innerhalb von 2sec. ausgeführt wird.
 
 ## Weiteführende Links
 
