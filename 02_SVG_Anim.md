@@ -174,6 +174,16 @@ Nun kann der __stroke-dashoffset__ animiert werden:
 }
 ```
 
+Wichtig ist den __animation-fill-mode__ zu setzen, falls die Animation nicht loopen sollte (ansonsten springt der Pfad wieder in seine Ausgangsposition zurück):
+```css
+.st0 {
+	stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+	animation: offset 2s infinite alternate linear; 
+	animation-fill-mode: forwards;
+}
+```
+
 Die Pfadlänge kann man auch per Javascript herausfinden. Am besten den Inspector öffnen und die in die Konsole folgendes kopieren:
 
 ```js
@@ -186,3 +196,9 @@ Die Antwort für den Beispiel Pfad wäre ~216.
 ### Aufgabe
 
 Gestalte verschiedene Vektorpfade, welche mit  __stroke-dashoffset__ und __stroke-dasharray__ bzw. den stroke Parametern animiert werden.
+
+## Weiterführende Links
+
+  - [Animated Line Drawing with interactive part](https://jakearchibald.com/2013/animated-line-drawing-svg/)
+  - [CSS Tricks on SVG Line Animation](https://css-tricks.com/svg-line-animation-works/)
+  - 
