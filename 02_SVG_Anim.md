@@ -1,6 +1,6 @@
-# SVG Graphiken animieren
+# SVG grafiken animieren
 
-[SVG](https://svgontheweb.com) steht für Scalable Vector Graphics. Es ist ein XML-basiertes Vektorformat für zweidimensionale Graphiken welche animiert und interaktiv fürs Web verwendet können.
+[SVG](https://svgontheweb.com) steht für Scalable Vector Graphics. Es ist ein XML-basiertes Vektorformat für zweidimensionale Grafiken welche animiert und interaktiv fürs Web verwendet können.
 
 Eine (rote) Linie als SVG könnte so aussehen: 
 
@@ -12,19 +12,19 @@ Eine (rote) Linie als SVG könnte so aussehen:
 
 Dieser Code kann direkt ins HTML eingefügt werden. Es handelt sich deshalb um eine Inline SVG. Mehr zu den Grundformen vom SVG Format hier unter diesem [Link](https://www.w3schools.com/html/html5_svg.asp).
 
-Illustrator (bzw. [Inkscape](https://inkscape.org/)) arbeiten ebenso mit Vektorgraphiken. Diese können bis zu einer gewissen Komplexität direkt in den HTML Code eingebunden werden. v
+Illustrator (bzw. [Inkscape](https://inkscape.org/)) arbeiten ebenso mit Vektorgrafiken. Diese können bis zu einer gewissen Komplexität direkt in den HTML Code eingebunden werden. v
 
-Hier ein einfacher Stern als Vektorgraphik, welche im Illustrator selektiert wurde:
+Hier ein einfacher Stern als Vektorgrafik, welche im Illustrator selektiert wurde:
 
 <img src="img/star.png" width="300"/>
 
-Und hier dieselbe Vektorgraphik im Browser animiert:
+Und hier dieselbe Vektorgrafik im Browser animiert:
 
 <img src="img/star_animated.gif" width="300"/>
 
-Die Vektorgraphik kann in ein XML Format konvertiert werden, indem sie aus dem Illustrations-Programm kopiert wird und anschliessend in den Text-Editor eingefügt wird (Copy/Paste).
+Die Vektorgrafik kann in ein XML Format konvertiert werden, indem sie aus dem Illustrations-Programm kopiert wird und anschliessend in den Text-Editor eingefügt wird (Copy/Paste).
 
-Eine eingefügte Graphik könnte so aus aussehen:
+Eine eingefügte Grafik könnte so aus aussehen:
 
 ```xml
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
@@ -44,7 +44,7 @@ Eine eingefügte Graphik könnte so aus aussehen:
 
 Die erste Zeile ist lediglich ein Kommentar. Danach kommt das Element <__svg__> , welches das <__g__> Element beinhaltet. Innerhalb eines <__g__> Elementes können mehrere SVG Elemente zu einer Gruppe zusammengefasst werden.
 
-Das Element <__path__> beschreibt nun die Vektorgraphik mittels x,y Koordinaten und Pfaden. Um es mit CSS zu animieren bzw. zu steuern, kann eine Klasse für dieses Element definiert werden:
+Das Element <__path__> beschreibt nun die Vektorgrafik mittels x,y Koordinaten und Pfaden. Um es mit CSS zu animieren bzw. zu steuern, kann eine Klasse für dieses Element definiert werden:
 
 ```xml
 	<path class="star" d="M36.5,1.6c1-2.1,2.7-2.1,3.8,0L49,19.3c1,2.1,3.8,4.1,6.1,4.4l19.5,2.8c2.3,0.3,2.8,1.9,1.2,3.6L61.6,43.9
@@ -75,7 +75,7 @@ Der Stern rotiert allerdings nicht um die Mitte, sondern der Rotationspunkt lieg
 transform-origin: center center;
 ```
 
-Es fällt noch auf, dass die Vektorgraphik "geclipped" wird, d. h. sie wird an den Grenzen des SVG Rahmens abgeschnitten. Um dieses Problem zu lösen, hilft der [__overflow__](https://www.w3schools.com/cssref/pr_pos_overflow.asp) Parameter. 
+Es fällt noch auf, dass die Vektorgrafik "geclipped" wird, d. h. sie wird an den Grenzen des SVG Rahmens abgeschnitten. Um dieses Problem zu lösen, hilft der [__overflow__](https://www.w3schools.com/cssref/pr_pos_overflow.asp) Parameter. 
 
 ```css
 svg {
@@ -87,7 +87,7 @@ Diese Regel wird auf **alle** svg Blockelemente angewandt. Die Art und Weise wie
 
 ### Challenge
 
-Versucht eine eigene Vektorgraphik aus einem Vektorprogramm zu exportieren und mit mind. 2 Parameter zu animieren.
+Versucht eine eigene Vektorgrafik aus einem Vektorprogramm zu exportieren und mit mind. 2 Parameter zu animieren.
 
 ## SVG Linienanimation
 
@@ -178,7 +178,7 @@ Wichtig ist den __animation-fill-mode__ zu setzen, falls die Animation nicht loo
 ```css
 .st0 {
 	stroke-dasharray: 220;
-    stroke-dashoffset: 220;
+	stroke-dashoffset: 220;
 	animation: offset 2s infinite alternate linear; 
 	animation-fill-mode: forwards;
 }
