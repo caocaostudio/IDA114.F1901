@@ -5,9 +5,9 @@ Handbuch und Referenz zu Übungsbeispielen zum Digital Design Kurs an der HSLU L
 ![CSS vertical](http://i.imgur.com/ajiIIq3.png)
 *Comic by https://xkcd.com/1168/*
 
-### Kapitel 1 (01_CSS_Anim.md).
+### Kapitel 1 (01_CSS_Anim.md)
 
-Animationen mit CSS.
+[Animationen mit CSS](https://github.com/caocaostudio/IDA114.F1901/blob/master/01_CSS_Anim.md)
 
 ### Kapitel 2 (02_SVG_Anim.md)
 
@@ -21,6 +21,6 @@ Media Queries.
 
 2 dimensionale Grids (Flexbox und CSS grids).
 
-### Kapitel 5 (05_bestpractices)
+### Kapitel 5 (05_bestpractices.md)
 
 Einige Tipps zu "best practices" im Web.

@@ -114,7 +114,7 @@ Im obigen Beispiel werden zwei CSS Parameter verändert. Welche?
 <p>
 
 ```css
-background-color: red; /* from green */
+background-color: green; /* from red */
 transform: rotate(45deg); /* from 0deg */
 ```
 
