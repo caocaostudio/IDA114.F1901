@@ -155,7 +155,7 @@ transition: background 4s, transform 2s;
 
 Die Farbe ändert sich nun über 4sec. wobei die Rotation innerhalb von 2sec. ausgeführt wird.
 
-## Weiteführende Links
+## Weiterführende Links
 
   - [Animista](http://animista.net/play/)
   - [The Shapes of CSS](https://css-tricks.com/the-shapes-of-css/)
