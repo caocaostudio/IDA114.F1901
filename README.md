@@ -12,16 +12,16 @@ Handbuch und Referenz zu Übungsbeispielen zum Digital Design Kurs an der HSLU L
 
 ### Kapitel 2 (02_SVG_Anim.md)
 
-Vektor Grafiken animieren.
+[Vektor Grafiken animieren](https://github.com/caocaostudio/IDA114.F1901/blob/master/02_SVG_Anim.md)
 
 ### Kapitel 3 (03_responsive.md)
 
-Media Queries.
+Media Queries and more
 
 ### Kapitel 4 (04_grids.md)
 
-2 dimensionale Grids (Flexbox und CSS grids).
+2 dimensionale Grids (Flexbox und CSS grids)
 
 ### Kapitel 5 (05_bestpractices.md)
 
-Einige Tipps zu "best practices" im Web.
+Einige Tipps zu "best practices" im Web
