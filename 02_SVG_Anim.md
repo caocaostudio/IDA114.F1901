@@ -201,4 +201,5 @@ Gestalte verschiedene Vektorpfade, welche mit  __stroke-dashoffset__ und __strok
 
   - [Animated Line Drawing with interactive part](https://jakearchibald.com/2013/animated-line-drawing-svg/)
   - [CSS Tricks on SVG Line Animation](https://css-tricks.com/svg-line-animation-works/)
-  - 
+  - [Another simple tutorial on medium](https://medium.com/@sterling.meghan/svg-line-animation-for-beginners-51857c88357f)
+  - [Vivius Javascript library](https://maxwellito.github.io/vivus/)
