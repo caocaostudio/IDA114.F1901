@@ -52,11 +52,12 @@ Das Element <__path__> beschreibt nun die Vektorgraphik mittels x,y Koordinaten 
 		L17.4,51c0.4-2.3-0.7-5.5-2.3-7.2L1,30.1c-1.7-1.6-1.2-3.2,1.2-3.6l19.5-2.8c2.3-0.3,5.1-2.3,6.1-4.4L36.5,1.6z"/>
 ```
 
-Im CSS kann die Klasse genauer beschrieben werden (Farbe, Position, Grösse) und die Animation definiert werden:
+Im CSS kann die Klasse genauer beschrieben werden (Farbe, Position, Grösse) und die Animation definiert werden (stroke für die Konturlinie, fill für die Füllfarbe):
 
 ```css
 .star {
 	fill: #ff0000;
+	stroke: black;
 	animation: rotate 2s infinite;
 }
 
@@ -81,3 +82,107 @@ svg {
 	overflow: visible;
 }
 ```
+
+Diese Regel wird auf **alle** svg Blockelemente angewandt. Die Art und Weise wie Elemente für die einzelnen CSS Regeln ausgewählt werden, nennt man auch [CSS Selektoren](https://www.w3schools.com/cssref/css_selectors.asp).
+
+### Challenge
+
+Versucht eine eigene Vektorgraphik aus einem Vektorprogramm zu exportieren und mit mind. 2 Parameter zu animieren.
+
+## SVG Linienanimation
+
+SVG Pfade können so animiert werden, dass sie wie gezeichnet wirken. Dazu wird ein Trick aus zwei CSS Parameter für SVG Pfade verwendet (__stroke-dasharray__ und __stroke-dashoffset__). Hier ein Pfad aus dem Vektorprogramm:
+
+<img src="img/line.png" width="300"/>
+
+Als kopiertes SVG sieht es so aus:
+
+```xml
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="96.5px" height="92.5px"
+        viewBox="20 20 96.5 92.5" style="enable-background:new 0 0 96.5 92.5;" xml:space="preserve">
+        <defs>
+        </defs>
+
+        <polyline class="st0"
+            points="0.5,108.5 0.5,81.7 27.5,81.5 27.5,54.5 54.5,54.5 54.5,27.5 81.5,27.5 81.5,0.5 108.5,0.5 " />
+    </svg>
+```
+
+Der Pfad ist als polyline definiert und hat bereits die Klasse _st0__.
+
+Mit __stroke-dasharray__ kann eine gestrichelte Linie erzeugt werden:
+
+```css
+.st0 {
+	stroke: black;
+	stroke-dasharray: 2;
+	stroke-width: 1px;
+	fill: transparent;
+}
+```
+
+Probiert jeweils __stroke-width__, __stroke-dasharray__ und __fill__ zu verändern.
+
+Je höher dass __stroke-dasharray__, desto "weniger" sieht man den Pfad. Die gestrichelte Linie kann nun mit __stroke-dashoffset animiert werden:
+
+```css
+.st0 {
+	stroke: black;
+	stroke-dasharray: 10;
+	stroke-width: 1px;
+	fill: transparent;
+	animation: strich 1s infinite linear; /* linear damit es beim Loop nicht stockt */
+}
+ @keyframes strich {
+	from {}
+
+	to {
+		stroke-dashoffset: 12; /* diesen Wert über trial & error ermittelt, damit die Animation flüssig wirkt
+	}
+}
+```
+
+Lässt man die Animation wieder weg, und erhöht das __stroke-dasharray__, dann verschwindet die Linie ab einem gewissen Wert (abhängig von der Pfadlänge). Man muss sich ein wenig hintasten und mit den Werten für __stroke-dasharray__ und __stroke-dashoffset__ herumexperimentieren. Beide sollte gerade nicht mehr sichtbar sein:
+
+```css
+.st0 {
+	stroke: black;
+	stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+	stroke-width: 1px;
+	fill: transparent;
+}
+```
+
+Nun kann der __stroke-dashoffset__ animiert werden:
+
+```css
+.st0 {
+	stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+	animation: offset 2s infinite alternate linear; 
+}
+ @keyframes offset {
+	from {
+		stroke-dashoffset: 220;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+```
+
+Die Pfadlänge kann man auch per Javascript herausfinden. Am besten den Inspector öffnen und die in die Konsole folgendes kopieren:
+
+```js
+var path = document.querySelector('.st0');
+path.getTotalLength();
+```
+
+Die Antwort für den Beispiel Pfad wäre ~216.
+
+### Aufgabe
+
+Gestalte verschiedene Vektorpfade, welche mit  __stroke-dashoffset__ und __stroke-dasharray__ bzw. den stroke Parametern animiert werden.
