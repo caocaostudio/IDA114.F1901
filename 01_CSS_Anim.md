@@ -134,7 +134,7 @@ div.red {
     transition: all 2s;
     width: 100px;
     height: 100px;
-    background: red;
+    background-color: red;
     position: absolute;
 }
 ```
