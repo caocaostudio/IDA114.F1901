@@ -94,7 +94,13 @@ animation-fill-mode: forwards;
 
 Die Mozilla [Dokumentation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode) bietet mehr Infos dazu.
 
-Das vollständige Beispiel gibt es unter diesem Link.
+Als Alternative kann man den __animation-fill-mode__ auch direkt am Ende der animation Zeile einfügen, wie z. B.:
+
+```css
+animation: movein 1s ease-in-out forwards;
+```
+
+Das vollständige Beispiel gibt es unter diesem [Link](https://gist.github.com/caocaostudio/9809018c7f181e62fe8ff2f9287d19e5).
 
 ## Transitions
 

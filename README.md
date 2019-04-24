@@ -3,6 +3,7 @@
 Handbuch und Referenz zu Übungsbeispielen zum Digital Design Kurs an der HSLU Luzern im Bachelor Digital Ideation (April - Juni 2019).
 
 ![CSS vertical](http://i.imgur.com/ajiIIq3.png)
+
 *Comic by https://xkcd.com/1168/*
 
 ### Kapitel 1 (01_CSS_Anim.md)
