@@ -16,8 +16,9 @@ Illustrator (bzw. [Inkscape](https://inkscape.org/)) arbeiten ebenso mit Vektorg
 
 Hier ein einfacher Stern als Vektorgraphik, welche im Illustrator selektiert wurde:
 
-![Star](img/star.png)
+<img src="img/star.png" width="300"/>
 
 Und hier dieselbe Vektorgraphik im Browser animiert:
 
-![Star](img/star_animated.gif)
+<img src="img/star_animated.gif" width="300"/>
+
