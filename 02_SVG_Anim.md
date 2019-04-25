@@ -12,7 +12,7 @@ Eine (rote) Linie als SVG könnte so aussehen:
 
 Dieser Code kann direkt ins HTML eingefügt werden. Es handelt sich deshalb um eine Inline SVG. Mehr zu den Grundformen vom SVG Format hier unter diesem [Link](https://www.w3schools.com/html/html5_svg.asp).
 
-Illustrator (bzw. [Inkscape](https://inkscape.org/)) arbeiten ebenso mit Vektorgrafiken. Diese können bis zu einer gewissen Komplexität direkt in den HTML Code eingebunden werden. v
+Illustrator (bzw. [Inkscape](https://inkscape.org/)) arbeiten ebenso mit Vektorgrafiken. Diese können bis zu einer gewissen Komplexität direkt in den HTML Code eingebunden werden.
 
 Hier ein einfacher Stern als Vektorgrafik, welche im Illustrator selektiert wurde:
 
@@ -24,7 +24,7 @@ Und hier dieselbe Vektorgrafik im Browser animiert:
 
 Die Vektorgrafik kann in ein XML Format konvertiert werden, indem sie aus dem Illustrations-Programm kopiert wird und anschliessend in den Text-Editor eingefügt wird (Copy/Paste).
 
-Eine eingefügte Grafik könnte so aus aussehen:
+Eine eingefügte Grafik könnte so aussehen:
 
 ```xml
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
@@ -42,7 +42,7 @@ Eine eingefügte Grafik könnte so aus aussehen:
 </svg>
 ```
 
-Die erste Zeile ist lediglich ein Kommentar. Danach kommt das Element <__svg__> , welches das <__g__> Element beinhaltet. Innerhalb eines <__g__> Elementes können mehrere SVG Elemente zu einer Gruppe zusammengefasst werden.
+Die erste Zeile ist lediglich ein \<!-- Kommentar  -->. Danach kommt das Element <__svg__> , welches das <__g__> Element beinhaltet. Innerhalb eines <__g__> Elementes können mehrere SVG Elemente zu einer Gruppe zusammengefasst werden.
 
 Das Element <__path__> beschreibt nun die Vektorgrafik mittels x,y Koordinaten und Pfaden. Um es mit CSS zu animieren bzw. zu steuern, kann eine Klasse für dieses Element definiert werden:
 
@@ -52,7 +52,7 @@ Das Element <__path__> beschreibt nun die Vektorgrafik mittels x,y Koordinaten u
 		L17.4,51c0.4-2.3-0.7-5.5-2.3-7.2L1,30.1c-1.7-1.6-1.2-3.2,1.2-3.6l19.5-2.8c2.3-0.3,5.1-2.3,6.1-4.4L36.5,1.6z"/>
 ```
 
-Im CSS kann die Klasse genauer beschrieben werden (Farbe, Position, Grösse) und die Animation definiert werden (stroke für die Konturlinie, fill für die Füllfarbe):
+Im CSS kann die Klasse genauer beschrieben werden (Farbe, Position, Grösse) und die Animation definiert werden (z. B  __stroke__ für die Konturlinie, __fill__ für die Füllfarbe. Hier eine komplette [Übersicht](https://www.w3.org/TR/SVG11/styling.html) aller Parameter für das "styling" von SVG):
 
 ```css
 .star {
@@ -74,6 +74,8 @@ Der Stern rotiert allerdings nicht um die Mitte, sondern der Rotationspunkt lieg
 ```css
 transform-origin: center center;
 ```
+
+Für __transform-origin__ kann entweder nur ein, zwei oder drei Parameter gesetzt werden (e.q. X, Y, Z Achsen).
 
 Es fällt noch auf, dass die Vektorgrafik "geclipped" wird, d. h. sie wird an den Grenzen des SVG Rahmens abgeschnitten. Um dieses Problem zu lösen, hilft der [__overflow__](https://www.w3schools.com/cssref/pr_pos_overflow.asp) Parameter. 
 
@@ -143,7 +145,9 @@ Je höher dass __stroke-dasharray__, desto "weniger" sieht man den Pfad. Die ges
 }
 ```
 
-Lässt man die Animation wieder weg, und erhöht das __stroke-dasharray__, dann verschwindet die Linie ab einem gewissen Wert (abhängig von der Pfadlänge). Man muss sich ein wenig hintasten und mit den Werten für __stroke-dasharray__ und __stroke-dashoffset__ herumexperimentieren. Beide sollte gerade nicht mehr sichtbar sein:
+Hier der komplette [Code](https://gist.github.com/caocaostudio/98e8933e5d3e5ed82b6b39f44a741d62) für dieses Beispiel.
+
+Lässt man die Animation wieder weg, und erhöht das __stroke-dasharray__, dann verschwindet die Linie ab einem gewissen Wert (abhängig von der Pfadlänge). Man muss sich ein wenig hintasten und mit den Werten für __stroke-dasharray__ und __stroke-dashoffset__ herumexperimentieren. Beide sollte gerade nicht mehr sichtbar sein (d.h. der Abstand der gestrichelten Linie ist länger als der Pfad selbst):
 
 ```css
 .st0 {
@@ -175,6 +179,7 @@ Nun kann der __stroke-dashoffset__ animiert werden:
 ```
 
 Wichtig ist den __animation-fill-mode__ zu setzen, falls die Animation nicht loopen sollte (ansonsten springt der Pfad wieder in seine Ausgangsposition zurück):
+
 ```css
 .st0 {
 	stroke-dasharray: 220;
@@ -191,7 +196,7 @@ var path = document.querySelector('.st0');
 path.getTotalLength();
 ```
 
-Die Antwort für den Beispiel Pfad wäre ~216.
+Die Antwort für den Beispiel Pfad wäre also 216 (anstatt 220).
 
 ### Aufgabe
 
