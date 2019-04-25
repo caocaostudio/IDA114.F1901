@@ -155,6 +155,43 @@ transition: background 4s, transform 2s;
 
 Die Farbe ändert sich nun über 4sec. wobei die Rotation innerhalb von 2sec. ausgeführt wird.
 
+## Mehrere Animation simultan
+
+Mit dem Komma können für ein Element mehrere Animation definiert werden. Es gilt lediglich zu beachten, dass nicht dieselben Parameter in den einzelnen Animation verändert werden können (sprich transform kann nur in einer Animation vorkommen):
+
+```css
+animation: rotate 1s linear infinite, colorchange 3s linear infinite alternate ;
+```
+
+Hier werden zwei Animationen (__rotate__ und __colorchange__) für ein Element definiert. Die zweite Animation __colorchange__ kann sogar mit einem Delay (hier z. B. 5sec.) gestartet werden. Achtung, die Reihenfolge ist wichtig:
+
+```css
+animation: rotate 1s linear infinite, colorchange 3s linear 5s infinite alternate ;
+```
+
+Der ganze Code:
+
+```css
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: rotate 1s linear infinite, colorchange 3s linear infinite alternate ;
+      
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorchange {
+  to {
+    background-color: blue;
+  }
+}
+```
+
 ## Weiterführende Links
 
   - [Animista](http://animista.net/play/)
