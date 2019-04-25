@@ -10,6 +10,8 @@ Eine (rote) Linie als SVG könnte so aussehen:
 </svg>
 ```
 
+Hier eine [Übersicht](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) aller basic shapes von SVG.
+
 Dieser Code kann direkt ins HTML eingefügt werden. Es handelt sich deshalb um eine Inline SVG. Mehr zu den Grundformen vom SVG Format hier unter diesem [Link](https://www.w3schools.com/html/html5_svg.asp).
 
 Illustrator (bzw. [Inkscape](https://inkscape.org/)) arbeiten ebenso mit Vektorgrafiken. Diese können bis zu einer gewissen Komplexität direkt in den HTML Code eingebunden werden.
