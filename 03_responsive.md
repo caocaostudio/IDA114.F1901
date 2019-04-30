@@ -1,6 +1,6 @@
-# Grids und Responsive Design
+# Responsive Design
 
-Der viewport des Browsers ist der Bereich des Fensters, in dem Webinhalte zu sehen sind. Dies ist oft nicht die gleiche Größe wie die komplette gerenderte Seite. Eine typische optimierte Website für "mobil-view" beinhaltet folgende Zeile in der __<head>__ Sektion:
+Der viewport des Browsers ist der Bereich des Fensters, in dem Webinhalte zu sehen sind. Dies ist oft nicht die gleiche Größe wie die komplette gerenderte Seite. Eine typische optimierte Website für "mobil-view" beinhaltet folgende Zeile in der __\<head>\</head>__ Sektion:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,15 +52,4 @@ Oder z. B. die Screengrösse und die Ausrichtung:
    /* das CSS wird nur geladen wenn das Gerät mind. 640px Breite 
    und im Querformat ist */ 
 }
-```
-
-## Grids
-Bislang hatten wir die Positionierung der einzelnen Block-Elemente mit __float__ kontrolliert. Für aufwändigere Layouts welche sich auf unterschiedlichen Screensizes ausrichten müssen, ist die Arbeit mit __float__ eher [mühsam](https://imgur.com/gallery/Q3cUg29). Anfangs musste man Tabellen, dann Floats, Inline-Block usw. verwenden, aber alle diese Methoden waren im Wesentlichen Hacks und Funktionen wie z.B. vertikale Zentrierung waren äusserst aufwendig. 
-
-[Grid CSS](https://www.w3schools.com/css/css_grid.asp) ist ein zweidimensionales System, d.h. es kann sowohl Spalten als auch Zeilen verarbeiten, im Gegensatz zu [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp), welches weitgehend für eindimensionale Layouts verwendet werden -> sprich für einzeilige horizontale oder vertikale Layouts. 
-
-https://css-tricks.com/snippets/css/complete-guide-grid/
-
-```css
-
 ```

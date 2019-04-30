@@ -16,12 +16,12 @@ Handbuch und Referenz zu Übungsbeispielen zum Digital Design Kurs an der HSLU L
 
 ### Kapitel 3 (03_responsive.md)
 
-Media Queries and more
+[Media Queries](https://github.com/caocaostudio/IDA114.F1901/blob/master/03_responsive.md)
 
 ### Kapitel 4 (04_grids.md)
 
 2 dimensionale Grids (Flexbox und CSS grids)
 
-### Kapitel 5 (05_bestpractices.md)
+### Kapitel 5 (05_javascript.md)
 
-Einige Tipps zu "best practices" im Web
+Intro zu Javascript
