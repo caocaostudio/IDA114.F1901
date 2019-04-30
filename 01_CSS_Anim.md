@@ -59,7 +59,7 @@ Das CSS für das rote Quadrat sieht folgendermassen aus:
 div.red {
       width: 100px;
       height: 100px;
-      background: red;
+      background-color: red;
       position: absolute;
       animation: movein 1s ease-in-out;
       top: 150px;

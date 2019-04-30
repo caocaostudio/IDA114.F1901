@@ -128,7 +128,7 @@ Mit __stroke-dasharray__ kann eine gestrichelte Linie erzeugt werden:
 
 Probiert jeweils __stroke-width__, __stroke-dasharray__ und __fill__ zu verändern.
 
-Je höher dass __stroke-dasharray__, desto "weniger" sieht man den Pfad. Die gestrichelte Linie kann nun mit __stroke-dashoffset animiert werden:
+Je höher dass __stroke-dasharray__, desto "weniger" sieht man den Pfad. Die gestrichelte Linie kann nun mit __stroke-dashoffset__ animiert werden:
 
 ```css
 .st0 {
@@ -203,6 +203,54 @@ Die Antwort für den Beispiel Pfad wäre also 216 (anstatt 220).
 ### Aufgabe
 
 Gestalte verschiedene Vektorpfade, welche mit  __stroke-dashoffset__ und __stroke-dasharray__ bzw. den stroke Parametern animiert werden.
+
+# CSS Variablen
+
+CSS Variablen sind wie Container-Objekte, welche bestimmte Werte enthalten, die in einem Dokument wiederverwendet werden können. In allen Programmiersprachen werden Variablen verwendet, um dynamische Werte zu speichern. In CSS können Variable wie folgt definiert werden:
+
+```css
+--deepest-black: black;
+```
+
+Variablen müssen immer mit __--__ (zwei Minus-Zeichen) beginnen. Um die Variable im Code wiederzuverwenden:
+
+```css
+background-color: var(--deepest-black);
+```
+
+Damit die Variable global gültig bzw. verwendbar ist, muss sie entweder im __:root__ oder im __body__ Element definiert werden:
+
+```css
+:root {
+	--deepest-black: black;
+}
+
+h1 {
+	color: var(--deepest-black)
+}
+```
+
+Falls die Variable nicht definiert ist, kann auch ein Default Wert gesetzt werden:
+
+```css
+h1 {
+	color: var(--deepest-black, #010101);
+}
+```
+
+Als Variablen Werte können alle gängigen CSS Einheiten verwendet werden:
+```css
+:root {
+	--deepest-black: black;
+	--left-margin: 10px;
+	--my-center: 50%;
+	--big-font: 3em;
+	--another-rouge: #ff0001;
+	--bgColor: hsl(20, 50%, 60%);
+}
+```
+
+Mehr [Infos](https://medium.freecodecamp.org/everything-you-need-to-know-about-css-variables-c74d922ea855) zu CSS Variablen und deren Verwendung.
 
 ## Weiterführende Links
 
