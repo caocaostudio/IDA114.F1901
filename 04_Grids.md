@@ -5,6 +5,8 @@ Bislang hatten wir die Positionierung der einzelnen Block-Elemente mit __float__
 
 Man kann die Eigenschaft __display: grid__ auf ein Container Element anwenden, wie z. B.
 
+Hier findet ihr das [Starter-File](https://gist.github.com/caocaostudio/2ae505fb174b7f4c6164938378d1c521).
+
 ```html
 <div class="container">
 	<div class="item">1</div>
