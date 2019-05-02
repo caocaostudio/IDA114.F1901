@@ -24,7 +24,7 @@ __external__ (am Ende des HTML Files)
 ```
 
 ### Mini-Aufgabe
-Seht euch folgendes (sehr simples Plugin) [WelcomeJS](https://github.com/stml/welcomejs) an. Versucht es auf einer Website einzubinden und die __console.log__ Nachricht mit simplen CSS Befehelen zu gestalten.
+Seht euch folgendes (sehr simples Plugin) [WelcomeJS](https://github.com/stml/welcomejs) an. Versucht es auf einer Website einzubinden und die __console.log__ Nachricht mit simplen CSS Eigenschaften zu gestalten.
 
 
 
