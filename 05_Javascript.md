@@ -82,7 +82,7 @@ Im CSS sollte die Klasse __hide__ noch definiert werden, z. B.:
 
 Dies macht aber erst Sinn, wenn es z. B. an einen Event (wie Mausklick, Mouseover, Tastenklick, Timer, etc.) angebunden wird.
 
-### Events
+## Events
 
 Alle User-Interaktionen können über Event-Listener mittels Javascript abgerufen werden. Die Methode [__addEventListener()__](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) registriert den angegebenen "Zuhörer" (Engl. "listener") an einem ausgewählten EventTarget (welcher durch __document.querySelector()__ beispielsweise ausgewählt wurde), auf welches es aufgerufen wird. 
 
