@@ -16,6 +16,9 @@ Die Eigenschaft __initial-scale__ steuert die Zoomstufe beim ersten Laden der Se
 
 Mit Media Queries lassen sich verschiedene CSS Parameter in Abhängigkeit von Bildschirmauflösung und Orientierung der aktuellen Browsergrösse (z.B. Smartphone-Bildschirm vs. Computerbildschirm) anpassen. Es wurde im Juni 2012 vom W3C zum empfohlenen Standard und ist unumgänglich für das Arbeiten im Responsive Design. Das Ziel von Responsive Design ist Webseiten zu erstellen, die die Bildschirmgröße und Ausrichtung erkennen und das Layout entsprechend ändern. 
 
+<img src="https://cdn-images-1.medium.com/max/2400/1*7YeOvzoYgUEDJdfQy2ERXg.png" width="640px">
+Diagram taken from [David Gilbertson](https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862)
+
 Eine Media Query besteht aus einem Medientyp und einem oder mehreren Ausdrücken die wahr bzw. falsch sein können, je nach Endgerät. Das Ergebnis der Media Query ist wahr, wenn der in der Medienabfrage angegebene Medientyp mit dem Gerätetyp übereinstimmt. Wenn die Bedingung der Media Query wahr ist (true), dann werden die darinstehenden CSS Regeln angewandt.
 
 Um z. B. ein bestimmtes CSS zu laden wenn ein Querformat vorliegt:
@@ -59,3 +62,5 @@ Oder z. B. die Screengrösse und die Ausrichtung:
 ## Weiterführende Links
 
   - [Breakpoints.css Beispiel](https://gist.github.com/caocaostudio/365a20e68daaf8e7bcba264523560201) Welcome to the world of mobile responsive Design
+  - [MaintainableCSS](https://maintainablecss.com
+  - [What units (em vs. px) for media queries](https://zellwk.com/blog/media-query-units/)
