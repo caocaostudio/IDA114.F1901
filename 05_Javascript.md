@@ -116,7 +116,31 @@ Die Klasse __hide__ sollte im CSS so definiert sein:
 
 Das Projekt [clickclickclick](https://clickclickclick.click/) von [Studio Moniker](https://studiomoniker.com/) nutzt viele Browser-spezifische Events, Eigenschaften und User-Inputs auf humorvolle Weise.
 
+Nebem dem [document](https://www.w3schools.com/jsref/dom_obj_document.asp) Element gibt es auch noch das [window](https://www.w3schools.com/js/js_window.asp) Element, welches verschiedene Funktionen sowie Variablen beinhaltet, so sind z. B. in __window.innerHeight__ bzw. __window.innerWidth__ die Grösse des aktuellen Browser-Fensters gespeichert.
 
+```js
+console.log("Window width: " + window.innerWidth);
+console.log("Window height: " + window.innerHeight);
+```
+
+Tastendrücke können ebenfalls als Trigger für Manipulation am DOM Element dienen (__keyup__ wenn die Taste losgelassen wird). 
+
+```js
+window.addEventListener("keyup",function(e) {
+    console.log(e);
+});
+```
+
+
+
+
+## Audio/Video steuern
+
+# Weiterführende Links
+
+  - [The Vanilla JS Toolkit](https://vanillajstoolkit.com/reference/)
+  - [Vanilla Javascript Cheatsheet](https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86)
+  - 
 
 ----
 
