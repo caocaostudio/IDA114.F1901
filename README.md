@@ -18,9 +18,9 @@ Handbuch und Referenz zu Übungsbeispielen zum Digital Design Kurs an der HSLU L
 
 [Media Queries](https://github.com/caocaostudio/IDA114.F1901/blob/master/03_responsive.md)
 
-### Kapitel 4 (04_grids.md)
+### Kapitel 4 (04_Grids.md)
 
-2 dimensionale Grids (Flexbox und CSS grids)
+[2 dimensionale Grids (CSS grids)](https://github.com/caocaostudio/IDA114.F1901/blob/master/04_Grids.md)
 
 ### Kapitel 5 (05_javascript.md)
 
