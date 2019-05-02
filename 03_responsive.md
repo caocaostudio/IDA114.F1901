@@ -62,5 +62,5 @@ Oder z. B. die Screengrösse und die Ausrichtung:
 ## Weiterführende Links
 
   - [Breakpoints.css Beispiel](https://gist.github.com/caocaostudio/365a20e68daaf8e7bcba264523560201) Welcome to the world of mobile responsive Design
-  - [MaintainableCSS](https://maintainablecss.com
+  - [MaintainableCSS](https://maintainablecss.com)
   - [What units (em vs. px) for media queries](https://zellwk.com/blog/media-query-units/)
