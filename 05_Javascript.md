@@ -18,7 +18,7 @@ __external__ (am Ende des HTML Files)
 
 ```html
 <!-- html webseite .... -->
-<script href="./link_zum_file.js" /> 
+<script href="./link_zum_file.js"></script> 
 </body>
 </html>
 ```
