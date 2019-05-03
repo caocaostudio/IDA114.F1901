@@ -23,17 +23,18 @@ __external__ (am Ende des HTML Files)
 </html>
 ```
 
-### Mini-Aufgabe
+### Challenge
+
 Seht euch folgendes (sehr simples Plugin) [WelcomeJS](https://github.com/stml/welcomejs) an. Versucht es auf einer Website einzubinden und die __console.log__ Nachricht mit simplen CSS Eigenschaften zu gestalten.
 
 ## Selektoren
 
 Javascript kann alle HTML Elemente sowie deren Attribute auf einer Seite ändern (dies wird auch DOM-Manipulation genannt). JS kann aber auch CSS Stile ändern, bestehende HTML Elemente entfernen, neue generieren bzw. auch neue Ereignisse (z. B. Popup bzw. Zeit-intervalle) erzeugen.
 
-Um ein HTML Element zu manipulieren, muss es zunächst mittels eines Selectors ausgewählt werden. Dieser Selector kann über die __id__ oder über die Klasse (__class__) abgerufen werden. Der Befehl dazu heisst [querySelector("CSSSELEKTOR")](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector). Diese Funktion gibt das erste Element innerhalb eines Dokuments zurück, welches dem angegebenen Selektor bzw. Selektoren entspricht. Nehmen wir an, es befindet sich ein Blockelement \<div class="item3"> im HTML Code: 
+Um ein HTML Element zu manipulieren, muss es zunächst mittels eines Selectors ausgewählt werden. Dieser Selector kann über die __id__ oder über die Klasse (__class__) abgerufen werden. Der Befehl dazu heisst [querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector). Diese Funktion gibt das erste Element innerhalb eines Dokuments zurück, welches dem angegebenen Selektor bzw. Selektoren entspricht. Nehmen wir an, es befindet sich ein Blockelement \<div class="item3"> im HTML Code: 
 
 ```js
-let div3 = document.querySelector(".item3");
+let div3 = document.querySelector(".item3"); // wenn das Element eine ID hätte dann wäre der Selektor #item3 
 console.log(div3);
 console.log("div3");
 ```
