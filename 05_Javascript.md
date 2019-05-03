@@ -1,7 +1,7 @@
 # Javascript
 
-Eine allgemeine Einführung in die Syntax zu Javascript gibt es unter folgendem [Link](https://github.com/fleshgordo/introJS/blob/master/01_walkthrough.md).
-
+Eine allgemeine Einführung in die Syntax zu Javascript gibt es unter folgendem [Link](https://github.com/fleshgordo/introJS/blob/master/01_walkthrough.md). Hier das [Starter File](https://gist.github.com/caocaostudio/6da1708c98f5c3e34ead8fa2ffe1517d) für diese Seite.
+ 
 Die Arbeit mit dem [Web-Inspektor](https://developers.google.com/web/tools/chrome-devtools/console/) und der Live-Console ist sehr hilfreich, um Bugs oder sonstige Fehler aufzufinden.
 
 Javascript kann einerseits direkt im HTML eingebunden sein (aka inline) oder über ein externes File geladen werden:
@@ -126,26 +126,88 @@ console.log("Window height: " + window.innerHeight);
 Tastendrücke können ebenfalls als Trigger für Manipulation am DOM Element dienen (__keyup__ wenn die Taste losgelassen wird). 
 
 ```js
-window.addEventListener("keyup",function(e) {
-    console.log(e);
+window.addEventListener("keyup",function(event) {
+    console.log(event);
 });
 ```
 
+Das zweite Argument der [__addEventListener__](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) Methode ist eigentlich eine Funktion, welche einen einzigen Parameter akzeptiert. In diesem Fall heisst die Variable __event__ und besteht aus einem Javascript Objekt vom Typ [KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent).
 
+Um herauszufinden welche Taste gedrückt worden ist, gibt es die Eigenschaft __key__ im Event Objekt:
 
+```js
+window.addEventListener("keyup",function(event) {
+    console.log(event.key);
+});
+```
+
+Nun kann mit einer if-Bedingung abgefragt werden, welche Taste gedrückt worden ist:
+
+```js
+window.addEventListener("keyup",function(event) {
+    if (event.key == "a") {
+        console.log("works for me!");
+    }
+});
+```
 
 ## Audio/Video steuern
+
+Mit dem HTML5 Standard gibt es die Möglichkeit [Videos](https://www.w3schools.com/tags/tag_video.asp) und [Audios](https://www.w3schools.com/tags/tag_audio.asp) direkt mit einem HTML Tag einzubetten. Die Syntax für ein Audio-File sieht so aus (im HTML Code):
+
+```html
+<audio src="sounds/snare.wav" class="snare"></audio>
+```
+Hier die Javascript Referenz für das [Audio](https://www.w3schools.com/jsref/dom_obj_audio.asp) Objekt.
+
+Das Audio Element kann nun mit __querySelector__ selektiert und danach abgespielt werden:
+
+```js
+document.querySelector(".snare").play();
+```
+
+Mit einem Tastendruck kombiniert sieht der Code so aus:
+
+```js
+window.addEventListener("keypress", function (event) {
+    if (event.key == "s") {
+        document.querySelector(".snare").currentTime = 0;
+        document.querySelector(".snare").play();     
+    } 
+});
+```
+
+### Challenge
+
+Probiere verschiedene [Events](https://www.w3schools.com/jsref/dom_obj_event.asp) aus und erweitere deine bisherige Arbeit um eine interaktive Komponente (Maus, Tastatur).
+
+## Timer 
+
+Mit der Funktion [setInterval](https://www.w3schools.com/jsref/met_win_setinterval.asp) können Intervalle erzeugt werden, welche alle x ms einen Code ausführen können. Im Beispiel hier alle 1000ms (= 1x pro Sekunde): 
+
+```js
+setInterval(function() { 
+    console.log("hello world!");
+}, 1000);
+```
+
+## jQuery
+
+[jQuery](http://jquery.com/) ist eine freie (und die meist verwendete) JavaScript-Bibliothek, die Funktionen zur DOM-Navigation und -Manipulation zur Verfügung stellt. [You might not need jquery](http://youmightnotneedjquery.com/) bzw. [You Don't Need jQuery](https://github.com/nefe/You-Dont-Need-jQuery) zeigen einen direkten Vergleich, wie viele jQuery Funktionen mit Standard Javascript gelöst werden können.
+
+Falls ihr jQuery ausprobieren möchtet, hier das [Online Handbuch](https://github.com/fleshgordo/introJS/blob/master/02_jquery.md) von einem früheren Kurs.
 
 # Weiterführende Links
 
   - [The Vanilla JS Toolkit](https://vanillajstoolkit.com/reference/)
+  - [Wes Bos Javascript 30days online course](https://javascript30.com/)
+  - [Lodash Bibliothek](https://lodash.com/)
   - [Vanilla Javascript Cheatsheet](https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86)
-  - 
-
-----
-
-
-
+  - [If Hemingway Wrote JavaScript](https://nostarch.com/hemingway)
+  - [Code Combat](https://codecombat.com/)
+  - [JS Checkio (Learning JS environment)](https://js.checkio.org/)
+  - [WTFJS Sammlung an "nerdigen" Javascript Scripts](https://github.com/denysdovhan/wtfjs)
+  
 
 ```js
 document.addEventListener("DOMContentLoaded", function() {
