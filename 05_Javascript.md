@@ -181,6 +181,49 @@ window.addEventListener("keypress", function (event) {
 
 Probiere verschiedene [Events](https://www.w3schools.com/jsref/dom_obj_event.asp) aus und erweitere deine bisherige Arbeit um eine interaktive Komponente (Maus, Tastatur).
 
+## QuerySelectorAll
+
+Mit __querySelectorAll__ können mehrere HTML Element auf einmal selektiert werden:
+
+```js
+let manyDivs = document.querySelectorAll(".item");
+console.log(manyDivs);
+```
+
+Um einen Event Listener an jedes einzelne Element anzuhängen, kann ein __forEach__ Loop verwendet werden:
+
+```js
+let manyDivs = document.querySelectorAll(".item");
+
+manyDivs.forEach(function(div) {
+    console.log(div);
+})
+```
+
+Innerhalb des for Loops ist nun jedes einzelne HTML Element die Variable __div__:
+```js
+let manyDivs = document.querySelectorAll(".item");
+
+manyDivs.forEach(function(div) {
+    div.addEventListener("mouseover",function(){ 
+        div.classList.add("playing");
+    });
+    div.addEventListener("mouseleave",function(){ 
+        div.classList.remove("playing");
+    })
+})
+```
+
+Es gibt allerdings auch Events die getriggert werden, wenn eine Animation gestartet bzw. beendet wird:
+
+```js
+manyDivs.forEach(function(div) {
+    div.addEventListener("transitionend",function(){ 
+        div.classList.remove("playing");
+    })
+})
+```
+
 ## Timer 
 
 Mit der Funktion [setInterval](https://www.w3schools.com/jsref/met_win_setinterval.asp) können Intervalle erzeugt werden, welche alle x ms einen Code ausführen können. Im Beispiel hier alle 1000ms (= 1x pro Sekunde): 
@@ -190,10 +233,17 @@ setInterval(function() {
     console.log("hello world!");
 }, 1000);
 ```
+## Seite geladen? 
+
+```js
+document.addEventListener("DOMContentLoaded", function() {
+  // code...
+});
+```
 
 ## jQuery
 
-[jQuery](http://jquery.com/) ist eine freie (und die meist verwendete) JavaScript-Bibliothek, die Funktionen zur DOM-Navigation und -Manipulation zur Verfügung stellt. [You might not need jquery](http://youmightnotneedjquery.com/) bzw. [You Don't Need jQuery](https://github.com/nefe/You-Dont-Need-jQuery) zeigen einen direkten Vergleich, wie viele jQuery Funktionen mit Standard Javascript gelöst werden können.
+[jQuery](http://jquery.com/) ist eine Open-Source (und die meist verwendete) JavaScript-Bibliothek, die Funktionen zur DOM-Navigation und -Manipulation zur Verfügung stellt. [You might not need jquery](http://youmightnotneedjquery.com/) bzw. [You Don't Need jQuery](https://github.com/nefe/You-Dont-Need-jQuery) zeigen einen direkten Vergleich, wie viele jQuery Funktionen mittlerweile mit Standard Javascript gelöst werden können.
 
 Falls ihr jQuery ausprobieren möchtet, hier das [Online Handbuch](https://github.com/fleshgordo/introJS/blob/master/02_jquery.md) von einem früheren Kurs.
 
@@ -209,8 +259,3 @@ Falls ihr jQuery ausprobieren möchtet, hier das [Online Handbuch](https://githu
   - [WTFJS Sammlung an "nerdigen" Javascript Scripts](https://github.com/denysdovhan/wtfjs)
   
 
-```js
-document.addEventListener("DOMContentLoaded", function() {
-  // code...
-});
-```
