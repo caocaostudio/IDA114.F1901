@@ -181,9 +181,9 @@ window.addEventListener("keypress", function (event) {
 
 Probiere verschiedene [Events](https://www.w3schools.com/jsref/dom_obj_event.asp) aus und erweitere deine bisherige Arbeit um eine interaktive Komponente (Maus, Tastatur).
 
-## QuerySelectorAll
+## querySelectorAll
 
-Mit __querySelectorAll__ können mehrere HTML Element auf einmal selektiert werden:
+Mit [__querySelectorAll__](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) können mehrere HTML Element auf einmal selektiert werden:
 
 ```js
 let manyDivs = document.querySelectorAll(".item");
