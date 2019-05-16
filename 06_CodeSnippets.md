@@ -46,6 +46,24 @@ window.open(src, "newWin", "width="+screen.availWidth+",height="+screen.availHei
 let source = "http://www.duckduckgo.com";
 window.open(source,'_blank');
 ```
+## Localstorage
+
+Mit [Localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) könnt ihr Variablen im Browser zwischenzeitlich speichern (ist praktisch wenn ihr eine neue Seite lädt und z.B. den Spielstand bzw. andere Informationen speichern wollt):
+
+```js
+// eine variable setzen
+localStorage.setItem('gameScore', 2);
+```
+
+Syntax um das Gespeicherte wieder auszulesen:
+```js
+let score = localStorage.getItem('gameScore');
+```
+
+Alle localStorage Objekte wieder löschen:
+```js
+localStorage.clear();
+```
 
 # Weiterführende Links
 
