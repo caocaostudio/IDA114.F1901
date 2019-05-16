@@ -11,3 +11,4 @@ Handbuch und Referenz zu Übungsbeispielen zum Digital Design Kurs an der HSLU L
   - [Media Queries](https://github.com/caocaostudio/IDA114.F1901/blob/master/03_responsive.md) (03_responsive.md)
   - [CSS grids](https://github.com/caocaostudio/IDA114.F1901/blob/master/04_Grids.md) (04_Grids.md)
   - [Intro zu Javascript](https://github.com/caocaostudio/IDA114.F1901/blob/master/05_Javascript.md) (05_Javascript.md)
+  - [Code Snippets](https://github.com/caocaostudio/IDA114.F1901/blob/master/06_CodeSnippets.md) (06_CodeSnippets.md)

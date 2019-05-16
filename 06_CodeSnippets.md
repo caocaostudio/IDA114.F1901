@@ -51,4 +51,4 @@ window.open(source,'_blank');
 
   - [30seconds of CSS](https://30-seconds.github.io/30-seconds-of-css/)
   - [Javascript 30 course by Wes Bos](https://javascript30.com)
-  - 
+  - [Awesome Javascript - Übersicht an Javascript Bibliotheken](https://github.com/sorrycc/awesome-javascript#typography)
